@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const { Application, Interview, User } = require('../models')
 
-// GET /api/applications  (supports ?status=applied&userId=1)
+// GET /api/applications  
 router.get('/', async (req, res) => {
   try {
     const { status, userId } = req.query
