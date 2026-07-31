@@ -4,9 +4,9 @@ const cors = require('cors')
 require('dotenv').config()
 
 const { db } = require('./models')
-const userRoutes = require('./routes/UserRoutes')
-const applicationRoutes = require('./routes/ApplicationRoutes')
-const interviewRoutes = require('./routes/InterviewRoutes')
+const userRoutes = require('./Routes/UserRoutes')
+const applicationRoutes = require('./Routes/ApplicationRoutes')
+const interviewRoutes = require('./Routes/InterviewRoutes')
 
 const app = express()
 app.use(cors())
@@ -17,9 +17,9 @@ function logger(req, nes, next){
     next()
 }
 
-app.use('/api/users', userRoutes)
-app.use('/api/applications', applicationRoutes)
-app.use('/api/interviews', interviewRoutes)
+app.use('/api/users', UserRoutes)
+app.use('/api/applications', ApplicationRoutes)
+app.use('/api/interviews', InterviewRoutes)
 
 // catch-all for any route that doesn't match the above
 app.use((req, res) => {
