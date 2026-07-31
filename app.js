@@ -17,9 +17,9 @@ function logger(req, nes, next){
     next()
 }
 
-app.use('/api/users', UserRoutes)
-app.use('/api/applications', ApplicationRoutes)
-app.use('/api/interviews', InterviewRoutes)
+app.use('/api/users', userRoutes)
+app.use('/api/applications', applicationRoutes)
+app.use('/api/interviews', interviewRoutes)
 
 // catch-all for any route that doesn't match the above
 app.use((req, res) => {
