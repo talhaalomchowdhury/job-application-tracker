@@ -4,9 +4,9 @@ const cors = require('cors')
 require('dotenv').config()
 
 const { db } = require('./models')
-const userRoutes = require('./routes/UserRoutes')
-const applicationRoutes = require('./routes/ApplicationRoutes')
-const interviewRoutes = require('./routes/InterviewRoutes')
+const userRoutes = require('./Routes/UserRoutes')
+const applicationRoutes = require('./Routes/ApplicationRoutes')
+const interviewRoutes = require('./Routes/InterviewRoutes')
 
 const app = express()
 app.use(cors())
